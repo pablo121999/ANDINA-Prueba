@@ -1,0 +1,27 @@
+¿Qué consideras una buena práctica que aplicas siempre en tus desarrollos y por qué? 
+
+Aplico los principios SOLID, asegurando que cada componente tenga una única responsabilidad, 
+que el código sea fácil de mantener y que las aplicaciones puedan escalar sin comprometer su estabilidad. 
+Esto me permite crear soluciones más organizadas, reutilizables y fáciles de extender en el tiempo
+
+¿Cuándo y por qué usar GIT y GitHub? 
+
+Git nos permite llevar el control de versiones de un proyecto, lo que permite registrar cambios, 
+trabajar de forma segura y regresar a un estado anterior si surge algún problema. ademas nos permite
+revisar código y gestionar tareas, lo que facilita el trabajo en equipo y el seguimiento del proyecto.
+
+
+¿En la Informatica y en específico en el Desarrollo de Software que es lo más importante antes de 
+Iniciar con el Desarrollo. ? 
+
+Antes de iniciar un desarrollo es fundamental tener claros y documentados los requerimientos del proyecto, 
+entendiendo qué problema se quiere resolver. 
+Además, es importante realizar un análisis previo para definir cómo se implementará la solución, considerando la arquitectura,
+tecnologías a usar y posibles limitaciones. Esto asegura que el desarrollo sea ordenado, 
+eficiente y alineado con las necesidades del cliente o usuario.
+
+¿Si te pido realizar algo fuera de la expectativa de tu cargo, como lo tomas? ¿Si no sabes lo que te 
+solicito es motivo de discusión o aprendizaje, como lo abortas paso a paso?  
+
+Lo tomaría como una oportunidad de aprendizaje, ya que me permite explorar nuevos conocimientos y 
+desarrollar habilidades fuera de mi zona habitual.
