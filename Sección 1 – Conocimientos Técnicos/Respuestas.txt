@@ -1,0 +1,82 @@
+1. ¿Cuál es la diferencia entre '==' y '===' en PHP? 
+
+== igualdad no estricta
+
+* Compara solo el valor, no el tipo de dato.
+*Si los tipos son diferentes, PHP intenta convertir uno al tipo del otro antes de comparar (conversión implícita).
+var_dump(5 == "5");     // true  (convierte "5" a número)
+
+=== igualdad estricta
+
+*Compara valor y tipo.
+*No hace conversión de tipos: si los tipos son diferentes, la comparación da false.
+
+var_dump(5 === "5");   // false (número vs cadena)
+
+2. ¿Qué valor retorna 'NaN == NaN' en JavaScript y por qué? 
+
+retorna un false, NaN significa "Not a Number" (no es un número).
+Esto se debe a que NaN representa un valor numérico inválido o indeterminado, 
+y no hay forma de determinar si dos valores inválidos son exactamente el mismo inválido.
+
+ejemplo:
+
+console.log(NaN == NaN);  // false
+
+3. ¿Qué hace .on('click', ...) comparado con .click() en jQuery? 
+
+.click() Es un atajo para .on('click', handler) pero solo enlaza el evento a los elementos que existen en el DOM en ese momento,
+Si el elemento es agregado dinámicamente después, no tendrá el evento.
+
+ejemplo:
+
+$('#btn').click(function() {
+    alert('Click con .click()');
+});
+
+.on('click', ...) Permite delegar eventos: el evento se asigna a un elemento padre (o al document) y se filtra por el selector dado,
+Funciona incluso si el elemento se crea dinámicamente después de que el script se ejecutó.
+
+ejemplo:
+
+$(document).on('click', '#btn', function() {
+    alert('Click con .on()');
+});
+
+4. ¿Qué diferencia hay entre INNER JOIN y LEFT JOIN en SQL? 
+
+INNER JOIN
+Devuelve solo las filas que tienen coincidencia en ambas tablas según la condición del ON,
+Si no hay coincidencia, la fila no aparece.
+
+ejemplo:
+
+SELECT * FROM clientes c
+INNER JOIN pedidos p ON c.id = p.cliente_id;
+
+LEFT JOIN
+Devuelve todas las filas de la tabla izquierda, aunque no tengan coincidencia en la tabla derecha,
+Si no hay coincidencia, las columnas de la tabla derecha se llenan con NULL.
+
+ejemplo:
+
+SELECT * FROM clientes c
+LEFT JOIN pedidos p ON c.id = p.cliente_id;
+
+5. ¿Qué es una condición falsy? Da tres ejemplos en PHP y JavaScript.
+
+Una condición falsy es un valor que, al evaluarse en un contexto booleano por ejemplo, dentro de un if, 
+se interpreta como false automáticamente, aunque no sea literalmente false.
+
+Ejemplos en PHP:
+
+if (0) echo "Se ejecuta";       // ❌ No se ejecuta
+if ("") echo "Se ejecuta";      // ❌ No se ejecuta
+if (null) echo "Se ejecuta";    // ❌ No se ejecuta
+
+Ejemplos en JavaScript:
+
+if (0) console.log("Se ejecuta");     // ❌ No se ejecuta
+if ("") console.log("Se ejecuta");    // ❌ No se ejecuta
+if (NaN) console.log("Se ejecuta");   // ❌ No se ejecuta
+
