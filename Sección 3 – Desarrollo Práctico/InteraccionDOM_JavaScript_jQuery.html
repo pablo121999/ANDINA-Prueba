@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interacción DOM con jQuery y JavaScript</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        #resultado {
+            margin-top: 10px;
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Interacción DOM</h2>
+
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+    <button id="btnGuardar">Guardar</button>
+
+    <!-- Div para mostrar el resultado -->
+    <div id="resultado"></div>
+
+    <script>
+        // Usamos jQuery solo para manejar el evento de clic
+        $(document).ready(function () {
+            $('#btnGuardar').click(function () {
+                // Con vanilla JS obtenemos el valor del input
+                let texto = document.getElementById('nombre').value;
+
+                // Convertimos a mayúsculas con JavaScript
+                let textoMayus = texto.toUpperCase();
+
+                // Mostramos el resultado en el div usando vanilla JS
+                document.getElementById('resultado').textContent = textoMayus;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
